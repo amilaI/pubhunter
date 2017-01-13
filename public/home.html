@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pub Hunter Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img class="background" src="images/pub.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="images/profilepic.png"></a>
+                    <a href="#!name">
+                        <span class="white-text name">Johnny Depp</span>
+                    </a>
+                    <a href="#!email">
+                        <span class="white-text email">johnnydepp@gmail.com</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">store</i>Home</a>
+            </li>
+            <li>
+                <a href="items.html" class="waves-effect">
+                    <i class="material-icons">assignment</i>Our Menu</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">loyalty</i>Promotions</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">location_on</i>Pub Hunter</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">perm_identity</i>My Profile</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">phone</i>Contact Us</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">search</i>Search</a>
+            </li>
+
+        </ul>
+
+        <div class="row" style="background-color: #f5f5f5;margin-bottom: 3px;">
+            <div class="col s12 m12 l12">
+                <a href="#" data-activates="slide-out" class="button-collapse" style="padding-left: 5px;position: fixed;top: 12px;color: #757575;">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <h5 style="text-align:center;font-weight: bold;font-family: 'Roboto', sans-serif;color: #757575;">Home</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="carousel carousel-slider center" data-indicators="true">
+                    <div class="carousel-item" href="#one!">
+                        <br>
+                        <h2 class="text-pink">Special Menus from Us</h2>
+                        <div id="container2" class="container2">
+                            <p>Best quality and seasonal ingredients available, right from our Market. Dig in to the comfort just for you.</p>
+                        </div>
+                        <img class="responsive-img" src="images/Hamburger__soft_drink-512.png">
+                        <br><br>
+                        <div class="carousel-caption">
+                            <a href="menu.html" class="btn btn-pink">Check Menu</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" href="#two!">
+                        <h2 class="text-success">Get Special Promotions</h2>
+                        <div class="container2">
+                            <p>Best quality and seasonal ingredients available, right from our Market. Dig in to the comfort foods you crave made to order just for you.</p>
+                        </div>
+                        <img class="responsive-img" src="images/unnamed.png">
+                        <br><br>
+                        <div class="carousel-caption">
+                            <a href="promotions.html" class="btn btn-success">Check Offers</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" href="#three!">
+                        <h2 class="text-red">Get Our Challenges and Win</h2>
+                        <div class="container2">
+                            <p>Best quality and seasonal ingredients available, right from our Market. Dig in to the comfort foods you crave made to order just for you.</p>
+                        </div>
+                        <img class="responsive-img" src="images/mapss.jpg" width="100px">
+                        <br><br>
+                        <div class="carousel-caption">
+                            <a href="maps.html" class="btn btn-red">Go to Challenges</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" href="#four!">
+                        <h2 class="text-blue">Keep your own profiles and Personal Offers</h2>
+                        <div class="container2">
+                            <p>My Profile gives you quick access to settings and tools for managing your account.</p>
+                        </div>
+                        <img class="responsive-img" src="images/profile.png" width="100px">
+                        <br><br>
+                        <div class="carousel-caption">
+                            <a href="profile.html" class="btn btn-blue">My Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.carousel.carousel-slider').carousel({full_width: true});
+                $(".button-collapse").sideNav();
+            });
+        </script>
+    </body>
+</html>

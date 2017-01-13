@@ -1,0 +1,128 @@
+.carousel {
+    height: 600px !important;
+}
+
+.carousel .indicators .indicator-item {
+    width: 10px;
+    height: 10px;
+    background-color: #afadad !important;
+    border: 2px solid #2f2c2c;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #1d1c1c !important;
+}
+
+.carousel .carousel-item img {
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.carousel-indicators li {
+    border: 2px solid #2f2c2c;
+}
+
+.carousel-indicators .active {
+    background-color: #676060;
+}
+
+.carousel-indicators {
+    bottom: -25px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    color: #564e4e;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    color: #564e4e;
+}
+
+.text-success {
+    color: #13c516;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #34c530;
+    border-color: #34c530;
+    border-radius: 20px;
+}
+
+.text-danger {
+    color: #de2280;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #de2280;
+    border-color: #de2280;
+    border-radius: 20px;
+}
+
+.text-info {
+    color: #1885e6;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #1885e6;
+    border-color: #1885e6;
+    border-radius: 20px;
+}
+
+.btn-pink {
+    color: #fff;
+    background-color: #BD3B7F;
+    border-radius: 20px;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #F06558;
+    border-radius: 20px;
+}
+
+
+.btn-blue {
+    color: #fff;
+    background-color: #467fd7;
+    border-radius: 20px;
+}
+
+.text-pink {
+    color: #BD3B7F;
+}
+
+.text-red {
+    color: #C43C2F;
+}
+
+.text-blue {
+    color: #467fd7;
+}
+
+.centerdiv {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+.container2 {
+    width: 660px;
+    position: relative;
+    margin: 0 auto;
+    line-height: 1.4em;
+}
+
+@media only screen and (max-width: 479px) {
+    .container2 {
+        width: 90%;
+    }
+}

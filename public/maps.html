@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="icon" href="images/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+
+    <meta charset="utf-8">
+    <style>
+        .dialog_text {
+            color: #0089ec;
+            font-weight: bold;
+        }
+
+        img.background {
+            opacity: 0.5;
+            filter: alpha(opacity=80);
+            /* For IE8 and earlier */
+        }
+
+        img.circle {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 130px;
+            width: 130px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img class="background" src="images/pub.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="images/profilepic.png"></a>
+                <a href="#!name"><span class="white-text name">Johnny Depp</span></a>
+                <a href="#!email"><span class="white-text email">johnnydepp@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">store</i>Home</a></li>
+        <li><a href="items.html" class="waves-effect"><i class="material-icons">assignment</i>Our Menu</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">loyalty</i>Promotions</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">location_on</i>Pub Hunter</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">perm_identity</i>My Profile</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">phone</i>Contact Us</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">search</i>Search</a></li>
+
+    </ul>
+
+    <div class="row" style="background-color: #f5f5f5;margin-bottom: 3px;">
+        <div class="col s12 m12 l12">
+            <a href="#" data-activates="slide-out" class="button-collapse" style="padding-left: 5px;position: fixed;top: 12px;color: #757575;"><i class="material-icons">menu</i></a>
+
+            <h5 style="text-align:center;font-weight: bold;font-family: 'Roboto', sans-serif;color: #757575;">Pub Hunter</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div id="google_map" class="col s12 m12 l12" style="padding:0 !important;height:90%; width:100%;position: absolute;"></div>
+
+        <div class="row" style="position: absolute;top: 95px;left: 10px;z-index: 99;width: 100%;">
+            <div class="col s3 m2 l2">
+                <a class="waves-effect waves-light" href="#modal1"><img src="images/icon2.png" style="width: 70px;" class="responsive-img" /></a>
+            </div>
+            <div class="col s6 m8 l8" style="text-align: center;">
+
+                <div class="progress" style="height: 12px;border: 1px solid #9e9e9e;">
+                    <div class="determinate" style="width: 70%;height:100%"></div>
+                </div>
+                <h5 style="color: #ee6e73;font-weight: bold;-webkit-text-stroke: 0.5px #c0392b;">7600 / 10000</h4>
+            </div>
+            <div class="col s3 m2 l2" style="text-align: right;padding-right: 20px;">
+                <a class="waves-effect waves-light" href="#modal2"><img src="images/icon3.png" style="width: 70px;" class="responsive-img" /></a>
+            </div>
+        </div>
+
+        <div class="row" style="position: absolute;top: 500px;left: 10px;z-index: 99;width:100%;">
+            <div class="col s6 m6 l6">
+                <a class="waves-effect waves-light" href="#modal3"><img src="images/icon1.png" style="width: 70px;" class="responsive-img" /></a>
+            </div>
+            <div class="col s6 m6 l6" style="text-align: right;padding-right: 20px;">
+                <a class="waves-effect waves-light" href="#modal4"><img src="images/icon4.png" style="width: 70px;" class="responsive-img" /></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Structure -->
+    <div id="modal3" class="modal" style="top: 50% !important;">
+        <div class="modal-content" style="text-align: center;">
+            <h5 style="color: #0089ec;text-align: center;">My Badges</h4>
+            <img src="images/badges.jpg" class="responsive-img" />
+            <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+    </div>
+
+    <div id="modal4" class="modal" style="top: 50% !important;">
+        <div class="modal-content" style="text-align: center;">
+            <h5 style="color: #0089ec;text-align: center;">My Challenges</h4>
+              <div class="collection">
+                <a href="#!" class="collection-item" style="color:#757575;"><i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get two beers</a>
+                <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a basic offer</a>
+                <a href="#!" class="collection-item" style="color:#757575;"><i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get 1 to 1 offer</a>
+                <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get one cocktail</a>
+              </div>
+            <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+    </div>
+
+    <script>
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see the error "The Geolocation service
+        // failed.", it means you probably did not give permission for the browser to
+        // locate you.
+
+        /*function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 6.865269, lng: 79.859853},
+            zoom: 15
+          });
+          var infoWindow = new google.maps.InfoWindow({map: map});
+
+          // Try HTML5 geolocation.
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+
+              infoWindow.setPosition(pos);
+              infoWindow.setContent('Location found.');
+              map.setCenter(pos);
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+          infoWindow.setContent(browserHasGeolocation ?
+                                'Error: The Geolocation service failed.' :
+                                'Error: Your browser doesn\'t support geolocation.');
+        }
+        */
+    </script>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        var map;
+        var marker;
+
+        function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+
+
+
+        function initMap() {
+
+            var contentString =
+                '<div style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>This is Pub Title </b></h6><p>Information about this pub is here.</br><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo 6</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;077 712 3456</div></div>' +
+                '<div class="row"><div class="col m4 s4 l4"><a id="okBtn" class="dialog_text waves-effect waves-teal btn-flat">OK</a></div><div class="col m8 s8 l8"><a class="dialog_text waves-effect waves-teal btn-flat">Details</a></div></div>' + '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: 500
+            });
+
+            var myLatLng = {
+                lat: 6.865269,
+                lng: 79.859853
+            };
+            map = new google.maps.Map(document.getElementById('google_map'), {
+                center: myLatLng,
+                zoom: 16
+            });
+
+            var pubMarker1 = new google.maps.Marker({
+                position: {
+                    lat: 6.865965,
+                    lng: 79.862934
+                },
+                map: map,
+                icon: 'images/pub.png'
+            });
+
+            google.maps.event.addListener(pubMarker1, "click", function (e) {
+             infowindow.close();
+             infowindow.open(map, this);
+             map.setCenter(marker.getPosition());
+            });
+
+            var pubMarker2 = new google.maps.Marker({
+                position: {
+                    lat: 6.867306,
+                    lng: 79.859035
+                },
+                map: map,
+                icon: 'images/pub.png'
+            });
+
+            google.maps.event.addListener(pubMarker2, "click", function (e) {
+             infowindow.close();
+             infowindow.open(map, this);
+             map.setCenter(marker.getPosition());
+            });
+
+            var pubMarker3 = new google.maps.Marker({
+                position: {
+                    lat: 6.862212,
+                    lng: 79.860037
+                },
+                map: map,
+                icon: 'images/pub.png'
+            });
+
+            // pubMarker3.addListener('click', function() {
+            //     infowindow.open(map, pubMarker3);
+            // });
+
+            google.maps.event.addListener(pubMarker3, "click", function (e) {
+             infowindow.close();
+             infowindow.open(map, this);
+             map.setCenter(marker.getPosition());
+            });
+
+            marker = new google.maps.Marker({
+                position: myLatLng,
+                animation: google.maps.Animation.DROP,
+                map: map,
+                title: 'My Location'
+            });
+            marker.addListener('click', toggleBounce);
+
+
+        }
+
+        $( "#okBtn" ).on( "click", function() {
+          alert();
+        });
+
+
+    </script>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJeqN1kwMVcMqGGG1UQKuFoiPsegJJwE&callback=initMap"></script>
+    <script>
+        $(document).ready(function() {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+            $(".button-collapse").sideNav();
+        });
+    </script>
+</body>
+
+</html>
