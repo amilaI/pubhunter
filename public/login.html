@@ -1,126 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>User Login</title>
+    <head>
+        <title>Login</title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <link rel="icon" href="images/logo.png">
 
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style type="text/css">
 
-<style type="text/css">
-.font{
-	font-family: 'Roboto', sans-serif
-}
-.signInForm{
-	margin-left:420px;
-	margin-top: 50px;
-}
-.inputfield{
-	width:250px
-}
-.inputfieldButton{
-	width:250px;
-	margin-top: 30px
-}
-.btn{
-	background-color: #F64747;
-	border-radius:30px
-}
-.lable{
-	padding-top: 10px
-}
-.login-image{
-	width: 100px;
-	height: 40px;
-	margin-left: 15px;
-	border-radius:60px
-}
-.input{
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 2px solid #F64747;
-    width: 250px;
-}
-.backgroundimg{
-	background-image: url(images/background.png);
-	background-size: 1366px 768px
+            img.center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .login-image {
+                margin-left: 10%;
+                border-radius: 40%;
+                width: 100px;
+                height: 40px;
+            }
+            .center-btn {
+                text-align: center;
+            }
 
-}
-.logoimage{
-	height: 150px;
-	width: 150px;
-	margin-left: 50px;
-	margin-bottom: 50px
-}
-.placeholdertxt{
-	color: black
-}
-@media only screen and (max-width: 500px) {
-    .signInForm{
-    	margin-left:12px;
-		margin-top:40px
-    }
-    .backgroundimg{
-    	background-size: 350px 500px
-    }
-    .logoimage{
-		height: 120px;
-		width: 120px;
-		margin-left: 60px;
-		margin-bottom: 30px
-	}
-}
-@media only screen and (max-width: 1200px) and (min-width: 500px) {
-    .signInForm{
-    	margin-left:350px;
-		margin-top:80px
-    }
-    .backgroundimg{
-    	background-size: 1000px 600px
-    }
-}
-</style>
+            /* label color */
+            .input-field label {
+                color: #000;
+            }
+            /* label focus color */
+            .input-field input[type=text]:focus + label {
+                color: #000;
+            }
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
 
+        </style>
 
-</head>
-<body class="backgroundimg">
+    </head>
+    <body style="background-image: url('images/background.png');">
 
-<div class="col-md-2"></div>
-<div class="col-md-8 signInForm">
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img class="background" src="images/pub.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="images/profilepic.png"></a>
+                    <a href="#!name">
+                        <span class="white-text name">Johnny Depp</span>
+                    </a>
+                    <a href="#!email">
+                        <span class="white-text email">johnnydepp@gmail.com</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="home.html" class="waves-effect">
+                    <i class="material-icons">store</i>Home</a>
+            </li>
+            <li>
+                <a href="menu.html" class="waves-effect">
+                    <i class="material-icons">assignment</i>Our Menu</a>
+            </li>
+            <li>
+                <a href="promotions.html" class="waves-effect">
+                    <i class="material-icons">loyalty</i>Promotions</a>
+            </li>
+            <li>
+                <a href="maps.html" class="waves-effect">
+                    <i class="material-icons">location_on</i>Pub Hunter</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">perm_identity</i>My Profile</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">phone</i>Contact Us</a>
+            </li>
+            <li>
+                <a href="#!" class="waves-effect">
+                    <i class="material-icons">search</i>Search</a>
+            </li>
 
-	<form class="form-signin">
-		<div class="">
-			<img class="logoimage" src="images/tapworks_logo.png">
-		</div>
-		<div class="inputfield">
-			<input id="inputEmail" class="input font placeholdertxt" placeholder="Username" required="true" autofocus="true" type="text">
-		</div>
-		<div class="inputfieldButton">
-			<input id="inputPassword" class="input font placeholdertxt" placeholder="Password" required="true" autofocus="true" type="password">
-		</div>
-		<div class="inputfieldButton">
-			<button class="btn btn-lg btn-block font" type="submit">Sign in</button>
-		</div>
-		<div class="lable">
-			<h5 class="font">Don't have an account? Sign Up!</h5>
-		</div>
-		<div class="lable">
-			<a href="https://accounts.google.com/ServiceLogin?sacu=1&continue=https%3A%2F%2Fwww.google.lk%2Fwebhp%3Fei%3D9ABiWLO-DMv_vAT28rKgCw%26ved%3D0EKkuCAUoAQ&hl=en#identifier">
-				<img class="login-image" src="images/google_logo.png">
-			</a>
+        </ul>
+        <div class="row" style="background-color: #f5f5f5;margin-bottom: 3px;">
+            <div class="col s12 m12 l12">
+                <a href="#" data-activates="slide-out" class="button-collapse" style="padding-left: 5px;position: fixed;top: 12px;color: #757575;">
+                    <i class="material-icons" style="color: white;">menu</i>
+                </a>
 
-			<img class="login-image" src="images/facebook.png">
-		</div>
-	</form>
-</div>
-<div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="row imgdiv">
+            <img class="center responsive-img" style="margin-top: 25px; width: 125px;" src="images/tapworks_logo.png"/>
+        </div>
+        <div class="row">
+            <form class="col s12 offset-m3 m6" action="maps.html">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate" required="required">
+                        <label for="icon_prefix">USERNAME</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input id="icon_prefix" type="password" class="validate" required="required">
+                        <label for="icon_prefix">PASSWORD</label>
+                    </div>
+                </div>
+                <div class="row center-btn col s12">
+                    <button class="btn waves-effect waves-light center  red lighten-1" type="submit">LOGIN</button>
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        OR CONNECT WITH</div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="https://accounts.google.com/login"><img class="responsive-img" src="images/g.png"></a>
+                    </div>
+                    <div class="col s6">
+                        <a href="https://www.facebook.com/"><img class="responsive-img" src="images/f.png"></a>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col s12 center">
+                    <a class="btn waves-effect waves-light center  red lighten-1" href="register.html">REGISTER WITH PUB HUNTER</a>
+                </div>
 
+            </div>
+        </div>
 
-
+    </div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+        });
+    </script>
 </body>
 </html>
