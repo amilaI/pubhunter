@@ -68,6 +68,22 @@
                 <h5 style="text-align:center;font-weight: bold;font-family: 'Roboto', sans-serif;color: #757575;">Home</h5>
             </div>
         </div>
+      <div class="row" style="margin-bottom: 5px;">
+    <form id="newsletterForm">
+        <div class="col s12 m12 l12" style="text-align: center;">
+            <span style="font-weight:bold;    color: #607D8B;">Pub Hunter News Letter. Get new daily deals and offers to your inbox!</span>
+        </div>
+        <div class="col s12 m6 offset-m3" style="text-align: center;">
+            <div class="input-field col s8">
+                <input id="newsletterEmail" type="email" name="email" class="validate" required="required" placeholder="Please enter your email here!">
+
+            </div>
+            <button style="margin-top: 18px;    font-weight: bold;" class="btn waves-effect waves-light col s4 indigo darken-4" type="submit" name="action">Subscribe
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>
 
         <div class="row">
             <div class="col s12 m12 l12">
@@ -147,10 +163,30 @@
 
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.carousel.carousel-slider').carousel({full_width: true});
                 $(".button-collapse").sideNav();
+
+                (function(){
+                   emailjs.init("user_5QiMd39v0ApaWjKSodfGQ");
+                })();
+
+                $("#newsletterForm").on("submit", function(event) {
+                    event.preventDefault();
+                    var newsletterEmail = $('#newsletterEmail').val();
+
+                    $("#newsletterForm").find("button").text("Sending ...");
+                    emailjs.sendForm("default_service","pub_hunter","newsletterForm")
+                    	.then(function(){
+                      	 alert("You have successfully subscribed!");
+                         $("#newsletterForm").find("button").text("Sent");
+                      }, function(err) {
+                        // alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+                         $("#newsletterForm").find("button").text("Send");
+                      });
+                });
             });
         </script>
     </body>
