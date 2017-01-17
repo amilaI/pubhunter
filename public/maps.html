@@ -11,6 +11,7 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
         <link rel="icon" href="images/logo.png">
         <!--Let browser know website is optimized for mobile-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 
         <meta charset="utf-8">
         <style>
@@ -38,6 +39,9 @@
 
 
         </style>
+        <script >
+
+                </script>
 
     </head>
 
@@ -110,14 +114,14 @@
                     <div class="progress" style="height: 12px;border: 1px solid #9e9e9e;">
                         <div class="determinate" style="width: 70%;height:100%"></div>
                     </div>
-                    <h5 style="color: #ee6e73;font-weight: bold;-webkit-text-stroke: 0.5px #c0392b;">7600 / 10000</h4>
+                    <h5 style="color: #ee6e73;font-weight: bold;-webkit-text-stroke: 0.5px #c0392b;">Points : <span class="points">0</span> / 10000</h4>
                 </div>
                 <div class="col s3 m2 l2" style="text-align: right;padding-right: 20px;">
                     <a class="waves-effect waves-light" href="#myProfileModal"><img src="images/icon3.png" style="width: 70px;" class="responsive-img"/></a>
                 </div>
             </div>
 
-            <div class="row" style="position: absolute;top: 500px;left: 10px;z-index: 99;width:100%;">
+            <div class="row" style="position: absolute;bottom: 0;left: 10px;z-index: 99;width:100%;">
                 <div class="col s6 m6 l6">
                     <a class="waves-effect waves-light" href="#modal3"><img src="images/icon1.png" style="width: 70px;" class="responsive-img"/></a>
                 </div>
@@ -139,8 +143,50 @@
         <div id="modal4" class="modal" style="top: 50% !important;">
             <div class="modal-content" style="text-align: center;">
                 <h5 style="color: #0089ec;text-align: center;">My Challenges</h4>
+                <img src="images/challegem.png" class="responsive-img" style="width: 250px;text-align: center;"/>
+                <br />
+                <span style="font-size: 16px;font-weight: bold;">Please select a nearby marker pub and select  go to challenges</span>
+<br />
+                <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
+
+        <div id="modal5" class="modal" style="top: 50% !important;">
+            <div class="modal-content" style="text-align: center;">
+                <h5 style="color: #0089ec;text-align: center;">Pub Hunter Super Pub Challenges</h4>
                 <div class="collection">
+                    <a id="c1" href="#!" class="collection-item" style="color:#757575;">
+                        <i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get two beers</a>
+                    <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a basic offer</a>
                     <a href="#!" class="collection-item" style="color:#757575;">
+                        <i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get 1 to 1 offer</a>
+                    <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get one cocktail</a>
+                </div>
+                <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal" style="top: 50% !important;">
+            <div class="modal-content" style="text-align: center;">
+                <h5 style="color: #0089ec;text-align: center;">Pub Hunter Family Pub Challenges</h4>
+                <div class="collection">
+                    <a href="#!" class="collection-item" style="color:#757575;" onclick="Materialize.toast('I am a toast', 3000, 'rounded', addPoints())">
+                        <i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get two beers</a>
+                    <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a basic offer</a>
+                    <a href="#!" class="collection-item" style="color:#757575;">
+                        <i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get 1 to 1 offer</a>
+                    <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get one cocktail</a>
+                </div>
+                <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal" style="top: 50% !important;">
+            <div class="modal-content" style="text-align: center;">
+                <h5 style="color: #0089ec;text-align: center;">Pub Hunter Mini Pub Challenges</h4>
+                <div class="collection">
+                    <a href="#!" class="collection-item" style="color:#757575;" onclick="Materialize.toast('I am a toast', 3000, 'rounded', addPoints())">
                         <i class="large material-icons" style="color:#0089ec;font-size: 21px;font-weight: bold;">done</i>&nbsp;&nbsp;Get two beers</a>
                     <a href="#!" class="collection-item" style="color:#757575;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a basic offer</a>
                     <a href="#!" class="collection-item" style="color:#757575;">
@@ -175,6 +221,7 @@
       </div>
       <div class="modal-footer" style="text-align:center">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" style="text-align:center">OK I Got it</a>
+        <a href="#dontshow" class=" modal-action modal-close waves-effect waves-green btn-flat" style="text-align:center">Don't show me again</a>
       </div>
     </div>
 
@@ -204,7 +251,7 @@
       </div>
       <div class="row">
           <div class="col s6" style="background-color: #8BC8DB;">
-              <h4 style="color:white" class="points">10 Points</h4>
+              <h4 style="color:white" ><span class="points">0</span> Points</h4>
           </div>
           <div class="col s6" style="background-color: #1B9AF7;">
               <h4 style="color:white" class="level">Level 3</h4>
@@ -255,25 +302,23 @@
 
             function initMap() {
 
-                var contentStringA = '<div id="infoA" style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Super Pub </b></h6><p>We know how important your leisure time is and we work really hard to give you the best environment to spend it in, a great range of food and drinks to enjoy and all at a price you can afford.</br><div class="row"><div class="col m12 s12 l12 center"><img class=responsive-img" style="width:200px" src="images/family.jpg"></div></div><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
-                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;011 111 223344</div></div><div class="row"><div class="col m12 s12 l12"><a id="challegesABtn" class="dialog_text waves-effect waves-teal btn-flat">Show Challenges</a></div></div></div>';
+                var contentStringA = '<div id="infoA" style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Super Pub </b></h6><p>We know how important your leisure time is and we work really hard to give you the best environment to spend it in, a great range of food and drinks to enjoy and all at a price you can afford.</br><div class="row"><div class="col m12 s12 l12 center"><img class=responsive-img" style="width:200px" src="images/super.jpg"></div></div><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
+                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;011 111 223344</div></div><div class="row"><div class="col m12 s12 l12"><a id="challegesABtn1" class="dialog_text waves-effect waves-teal btn-flat">Show Challenges</a></div></div></div>';
 
-                var contentStringB = '<div style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Family Pub </b></h6><p>Information about this pub is here.</br><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
-                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;077 712 3456</div></div><div class="row"><div class="col m4 s4 l4"><a i' +
-                        'd="okBtn" class="dialog_text waves-effect waves-teal btn-flat">OK</a></div><div class="col m8 s8 l8"><a class="dialog_text waves-effect waves-teal btn-flat">Details</a></div></div></div>';
+                var contentStringB = '<div id="infoB" style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Family Pub </b></h6><p>We know how important your leisure time is and we work really hard to give you the best environment to spend it in, a great range of food and drinks to enjoy and all at a price you can afford.</br><div class="row"><div class="col m12 s12 l12 center"><img class=responsive-img" style="width:200px" src="images/family.jpg"></div></div><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
+                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;011 222 778899</div></div><div class="row"><div class="col m12 s12 l12"><a id="challegesABtn2" class="dialog_text waves-effect waves-teal btn-flat">Show Challenges</a></div></div></div>';
 
-                var contentStringC = '<div style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Mini Pub </b></h6><p>Information about this pub is here.</br><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
-                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;077 712 3456</div></div><div class="row"><div class="col m4 s4 l4"><a i' +
-                        'd="okBtn" class="dialog_text waves-effect waves-teal btn-flat">OK</a></div><div class="col m8 s8 l8"><a class="dialog_text waves-effect waves-teal btn-flat">Details</a></div></div></div>';
-
+                var contentStringC = '<div id="infoC" style="text-align: left;"><h6 style="text-align: center;color: #0089ec;font-weight: bold;"><b>Pub Hunter Mini Pub </b></h6><p>We know how important your leisure time is and we work really hard to give you the best environment to spend it in, a great range of food and drinks to enjoy and all at a price you can afford.</br><div class="row"><div class="col m12 s12 l12 center"><img class=responsive-img" style="width:200px" src="images/mini.jpg"></div></div><div class="row"><div class="col m12 s12 l12"  style="border: 1px solid #d0d0d0;"' +
+                        '><i class="material-icons">location_on</i>&nbsp;&nbsp;Colombo</div><div class="col m12 s12 l12" style="border: 1px solid #d0d0d0;"><i class="material-icons">call</i>&nbsp;&nbsp;011 555 887788</div></div><div class="row"><div class="col m12 s12 l12"><a id="challegesABtn3" class="dialog_text waves-effect waves-teal btn-flat">Show Challenges</a></div></div></div>';
                 var infowindowA = new google.maps.InfoWindow({content: contentStringA, maxWidth: 300});
-                var infowindowB = new google.maps.InfoWindow({content: contentStringB, maxWidth: 500});
-                var infowindowC = new google.maps.InfoWindow({content: contentStringC, maxWidth: 500});
+                var infowindowB = new google.maps.InfoWindow({content: contentStringB, maxWidth: 300});
+                var infowindowC = new google.maps.InfoWindow({content: contentStringC, maxWidth: 300});
 
                 var infowindow = new google.maps.InfoWindow({content: "My Location"});
                 var myLatLng;
                 if (navigator.geolocation) {
                   navigator.geolocation.getCurrentPosition(function(position) {
+
                     myLatLng = {
                       lat: position.coords.latitude,
                       lng: position.coords.longitude
@@ -369,17 +414,117 @@
                        });
                      });
 
-                  }, function() {
+                  }, function(error) {
+                    alert("Google maps can't detect your location!! Therfore setting a hardcoded location!!")
+                    console.dir(error);
+                    myLatLng = {
+                      lat: 6.940397,
+                      lng: 79.879441
+                    };
+
+                    map = new google.maps.Map(document.getElementById('google_map'), {
+                        center: myLatLng,
+                        zoom: 16
+                    });
+
+                    var marker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map,
+                      title: 'My Location!'
+                    });
+
+                     google.maps.event.addListener(marker, "click", function(e) {
+                         infowindow2.close();
+                         infowindow2.open(map, this);
+                         map.setCenter(marker.getPosition());
+                         marker.addListener('click', toggleBounce);
+                     });
+
+                     var l1 = 6.940397 - 0.0030;
+                     var l2 = 79.879441 - 0.0030;
+
+                     var pubMarker1 = new google.maps.Marker({
+                         position: {
+                           lat: l1,
+                           lng: l2
+                         },
+                         map: map,
+                         icon: 'images/pub.png'
+                     });
+
+                     google.maps.event.addListener(pubMarker1, "click", function(e) {
+                         infowindow.close();
+                         infowindowA.close();
+                         infowindowB.close();
+                         infowindowC.close();
+                         map.setCenter(pubMarker1.getPosition());
+                         infowindowA.open(map, this);
+
+                     });
+
+
+                     var l3 =  6.940397- 0.0030;
+                     var l4 = 79.879441 - 0.0000000200;
+
+                     var pubMarker2 = new google.maps.Marker({
+                         position: {
+                           lat: l3,
+                           lng: l4
+                         },
+                         map: map,
+                         icon: 'images/pub.png'
+                     });
+
+                     google.maps.event.addListener(pubMarker2, "click", function(e) {
+                         infowindow.close();
+                         infowindowA.close();
+                         infowindowB.close();
+                         infowindowC.close();
+                         infowindowB.open(map, this);
+                     });
+
+
+                     var l4 =  6.940397;
+                     var l5 = 79.879441 + 0.00600;
+
+                     var pubMarker3 = new google.maps.Marker({
+                         position: {
+                           lat: l4,
+                           lng: l5
+                         },
+                         map: map,
+                         icon: 'images/pub.png'
+                     });
+
+                     google.maps.event.addListener(pubMarker3, "click", function(e) {
+                         infowindow.close();
+                         infowindowA.close();
+                         infowindowB.close();
+                         infowindowC.close();
+                         infowindowC.open(map, this);
+                     });
+
 
                   });
                 }else{
                   alert("Unfortunately Google Maps cannot detect your current location! Please use Google Chrome and enable location settings!!");
                 }
+
+
+
+
+                 google.maps.event.addListener(infowindow, 'domready', function() {
+                   google.maps.event.addDomListener(contentStringA, 'click', function() {
+
+                     alert($(this).attr('id'));
+                   });
+                 });
+
             }
 
 
         </script>
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJeqN1kwMVcMqGGG1UQKuFoiPsegJJwE&callback=initMap"></script>
         <script>
@@ -389,10 +534,29 @@
                 $(".button-collapse").sideNav();
                 $('#rulesModal').modal('open');
 
+                $("body").delegate("#challegesABtn1", "click", function () {
+                  $('#modal5').modal('open');
+
+                });
+
+                $("body").delegate("#challegesABtn2", "click", function () {
+                  $('#modal6').modal('open');
+                });
+
+                $("body").delegate("#challegesABtn3", "click", function () {
+                  $('#modal7').modal('open');
+                });
 
                 $(".dialog_text").on("click", function () {
                   alert("Hi");
                 });
+
+                $("#c1").on("click", function () {
+                  Materialize.toast('Congratulations!! You got 100 Points', 3000, 'rounded');
+                  var a = parseInt($(".points").html()) + 100;
+                  $('.points').html(a);
+                });
+
             });
         </script>
     </body>

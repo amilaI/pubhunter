@@ -1,0 +1,162 @@
+<html>
+   <head>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="icon" href="images/logo.png">
+      <style>
+         .shopping-cart {width: 100%; border-top: 1px solid #C3C3C3; border-right: 1px solid #C3C3C3; clear: both;}
+         .shopping-cart th {background: #F0F0F0;}
+         .shopping-cart th, .shopping-cart td {border-bottom: 1px solid #C3C3C3; border-left: 1px solid #C3C3C3; padding: 3px;}
+         .shopping-cart .link {font-size: 90%; white-space: nowrap;}
+         .shopping-cart .product {width: 55%}
+         .shopping-cart .price {width: 5%;}
+         .shopping-cart .quantity {width: 15%;}
+         .shopping-cart .quantity input {width: 30px;}
+         .shopping-cart .price {width: 20%;}
+         .shopping-cart .product-img {border: 1px solid #ccc; background-color: #e9e9e9; padding: 3px; width: 80px; height: 80px; float: left;}
+         .shopping-cart .product-img img {max-width:80px;max-height:80px;width:auto;height:auto;}
+         .shopping-cart .product-name {margin-left: 100px;}
+         .shopping-cart tr.totals {font-weight: bold;}
+         .shopping-cart tr.totals a {font-weight: normal;}
+         .shopping-cart .quantity-span {text-align: right;}
+         .coupon {margin:20px 0 0;text-align:right;}
+         .continue-shopping {float:left;margin:20px 0;}
+         .checkout-button {float: right; margin: 20px 0; font-weight: bold;}
+      </style>
+      <script></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+               <div class="row valign-wrapper">
+                  <div class="col s2">
+                     <img src="images/green-tick.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10">
+                     <span class="black-text">
+                     Item successfully added to cart!
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <ul id="slide-out" class="side-nav">
+            <li>
+               <div class="userView">
+                  <div class="background">
+                     <img class="background" src="images/pub.jpg">
+                  </div>
+                  <a href="#!user"><img class="circle" src="images/profilepic.png"></a>
+                  <a href="#!name">
+                  <span class="white-text name">Johnny Depp</span>
+                  </a>
+                  <a href="#!email">
+                  <span class="white-text email">johnnydepp@gmail.com</span>
+                  </a>
+               </div>
+            </li>
+            <li>
+               <a href="home.html" class="waves-effect">
+               <i class="material-icons">store</i>Home</a>
+            </li>
+            <li>
+               <a href="items.html" class="waves-effect">
+               <i class="material-icons">assignment</i>Our Menu</a>
+            </li>
+            <li>
+               <a href="promotions.html" class="waves-effect">
+               <i class="material-icons">loyalty</i>Promotions</a>
+            </li>
+            <li>
+               <a href="maps.html" class="waves-effect">
+               <i class="material-icons">location_on</i>Pub Hunter</a>
+            </li>
+            <li>
+               <a href="profile.html" class="waves-effect">
+               <i class="material-icons">perm_identity</i>My Profile</a>
+            </li>
+            <li>
+               <a href="#!" class="waves-effect">
+               <i class="material-icons">phone</i>Contact Us</a>
+            </li>
+            <li>
+               <a href="#!" class="waves-effect">
+               <i class="material-icons">search</i>Search</a>
+            </li>
+         </ul>
+         <button onclick="goBack()" class="continue-shopping waves-effect waves-light btn red"> Continue Shopping</button>
+         <table id="mytab" class="highlight striped bordered">
+            <thead>
+               <tr>
+                  <th data-field="id"></th>
+                  <th data-field="name">Item Name</th>
+                  <th data-field="price">Item Price</th>
+                  <th data-field="quantity">Quantity</th>
+                  <th data-field="total">Total</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+               </tr>
+               <tr>
+               </tr>
+               <tr>
+               </tr>
+               <tr class="totals">
+                  <td colspan="3"></td>
+                  <td class="quantity-span">Sub Total</td>
+                  <td class="price">$ 1000.00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div style="clear: both;"></div>
+         <br>
+         <a class="pin-payment-button btn red waves-effect waves-light" href="" style="float: right;">Checkout
+         <i class="material-icons right">send</i>
+         </a>
+      </div>
+      <script src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.min.js"></script>
+      <script src="https://cdn.pin.net.au/pin.v2.js"></script>
+      <script type="text/javascript">
+         function goBack() {
+             window.history.go(-1);
+         }
+         $(document).ready(function () {
+         
+         var data = {};
+         data.d = [{FirstName: 'Mojito', Price: '100.00', Quantity: '1', Total: '100.00'}, 
+           {FirstName: 'Cheese', Price: '200.00', Quantity: '1', Total: '200.00'},
+           {FirstName: 'Martin', Price: '350.00', Quantity: '2', Total: '700.00'}];
+         
+         $('#mytab tr').not(':first').not(':last').remove();
+         var html = '';
+         for(var i = 0; i < data.d.length; i++)
+             html += '<tr><td>' + '' + '</td><td>' + data.d[i].FirstName + '</td><td>'+ '$ ' + data.d[i].Price + '</td><td>'+ data.d[i].Quantity + '</td><td>'+ '$ ' + data.d[i].Total + '</td></tr>';
+         $('#mytab tr').first().after(html);
+         
+         $(".button-collapse").sideNav();
+             $(".pin-payment-button").click(function (e) {
+                 var _email_address = 'test@gmail.com';
+         
+                 var _pin_amount = '1000';
+         
+                 var _description = "Online Payment";
+         
+                 var _success_url = "https://www.google.com/";
+         
+                 var burl = "https://pay.pin.net.au/qs4w/test?amount=" + _pin_amount + "&email=" + _email_address + "&description=" + _description + " &success_url=" + _success_url;
+         
+                 $(".pin-payment-button").attr('href', burl);
+         
+         
+             });
+         });
+      </script>
+   </body>
+</html>
