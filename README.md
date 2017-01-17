@@ -22,5 +22,5 @@ http://          :3000
 You tube demo
 
 
-Client-side technologies : Jquery, MaterializeCSS responsive framework, Bootstrap, Email.js , Google Maps Javascript API
+Client-side technologies : Jquery, MaterializeCSS responsive framework, Bootstrap, Email.js , Google Maps Javascript API ,Pin Payments
 Server-side technologies : Node.js
