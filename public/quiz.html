@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+
+    <title>MCQ Quiz</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="images/logo.png">
+
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+    <script src="js/controller.js"></script>
+
+</head>
+<body>
+  <ul id="slide-out" class="side-nav">
+      <li>
+          <div class="userView">
+              <div class="background">
+                  <img class="background" src="images/pub.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="images/profilepic.png"></a>
+              <a href="#!name">
+                  <span class="white-text name">Johnny Depp</span>
+              </a>
+              <a href="#!email">
+                  <span class="white-text email">johnnydepp@gmail.com</span>
+              </a>
+          </div>
+      </li>
+      <li>
+          <a href="home.html" class="waves-effect">
+              <i class="material-icons">store</i>Home</a>
+      </li>
+      <li>
+          <a href="items.html" class="waves-effect">
+              <i class="material-icons">assignment</i>Our Menu</a>
+      </li>
+      <li>
+          <a href="promotions.html" class="waves-effect">
+              <i class="material-icons">loyalty</i>Promotions</a>
+      </li>
+      <li>
+          <a href="maps.html" class="waves-effect">
+              <i class="material-icons">location_on</i>Pub Hunter</a>
+      </li>
+      <li>
+          <a href="profile.html" class="waves-effect">
+              <i class="material-icons">perm_identity</i>My Profile</a>
+      </li>
+      <li>
+          <a href="#!" class="waves-effect">
+              <i class="material-icons">phone</i>Contact Us</a>
+      </li>
+      <li>
+          <a href="#!" class="waves-effect">
+              <i class="material-icons">search</i>Search</a>
+      </li>
+
+  </ul>
+
+  <div class="row" style="background-color: #f5f5f5;margin-bottom: 3px;">
+      <div class="col s12 m12 l12">
+          <a href="#" data-activates="slide-out" class="button-collapse" style="padding-left: 5px;position: fixed;top: 12px;color: #757575;">
+              <i class="material-icons">menu</i>
+          </a>
+
+          <h5 style="text-align:center;font-weight: bold;font-family: 'Roboto', sans-serif;color: #757575;">Pub Hunter Quiz</h5>
+      </div>
+  </div>
+    <div class="container">
+        <div id="topbar">Pub Hunter  Quiz</div>
+        <div class="spacer centered"></div>
+
+        <div id="navContent">
+
+            <div id="game1"></div>
+            <div id="game2"></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+$(document).ready(function() {
+
+  $(".button-collapse").sideNav();
+});
+
+
+</script>
+</body>
+</html>

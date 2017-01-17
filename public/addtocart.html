@@ -128,33 +128,33 @@
              window.history.go(-1);
          }
          $(document).ready(function () {
-         
+
          var data = {};
-         data.d = [{FirstName: 'Mojito', Price: '100.00', Quantity: '1', Total: '100.00'}, 
-           {FirstName: 'Cheese', Price: '200.00', Quantity: '1', Total: '200.00'},
-           {FirstName: 'Martin', Price: '350.00', Quantity: '2', Total: '700.00'}];
-         
+         data.d = [{FirstName: 'Mongolian Rice', Price: '400.00', Quantity: '1', Total: '400.00'},
+           {FirstName: 'Mixed Fried Rice', Price: '300.00', Quantity: '1', Total: '300.00'},
+           {FirstName: 'Fried Chicken Portion', Price: '500.00', Quantity: '1', Total: '500.00'}];
+
          $('#mytab tr').not(':first').not(':last').remove();
          var html = '';
          for(var i = 0; i < data.d.length; i++)
              html += '<tr><td>' + '' + '</td><td>' + data.d[i].FirstName + '</td><td>'+ '$ ' + data.d[i].Price + '</td><td>'+ data.d[i].Quantity + '</td><td>'+ '$ ' + data.d[i].Total + '</td></tr>';
          $('#mytab tr').first().after(html);
-         
+
          $(".button-collapse").sideNav();
              $(".pin-payment-button").click(function (e) {
-                 var _email_address = 'test@gmail.com';
-         
+                 var _email_address = 'induminiw@gmail.com';
+
                  var _pin_amount = '1000';
-         
+
                  var _description = "Online Payment";
-         
-                 var _success_url = "https://www.google.com/";
-         
+
+                 var _success_url = "http://45.55.187.91:3000/home.html";
+
                  var burl = "https://pay.pin.net.au/qs4w/test?amount=" + _pin_amount + "&email=" + _email_address + "&description=" + _description + " &success_url=" + _success_url;
-         
+
                  $(".pin-payment-button").attr('href', burl);
-         
-         
+
+
              });
          });
       </script>

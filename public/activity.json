@@ -1,0 +1,29 @@
+{"quizlist":[
+  
+	{
+	"question":"Which alcoholic spirit is the main ingredient in a Tom Collins?",
+	"option1":"Gin",
+	"option2":"Ben",
+	"option3":"Ecuador"
+	},
+	{
+	"question":"Cheers, the American sitcom television series is set in which city?",
+	"option1":"Boston",
+	"option2":"Bogota",
+	"option3":"San Juan"
+	},
+	{
+	"question":"The Otley Run is a famous pub crawl in which UK city",
+	"option1":"Leeds",
+	"option2":"Uruguay",
+	"option3":"Colombia"
+	},
+	{
+	"question":"The Rose Street crawl is a famous pub crawl in which city",
+	"option1":"Edinburgh",
+	"option2":"Bogota",
+	"option3":"Gin"
+	}
+
+]
+}

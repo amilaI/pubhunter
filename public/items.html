@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Items</title>
-				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
@@ -39,7 +39,7 @@
       </ul>
     </div>
  </nav> -->
-<!-- <nav>
+        <!-- <nav>
     <div class="nav-wrapper">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li>
@@ -60,173 +60,216 @@
     </div>
 </nav> -->
 
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="left hide-on-med-and-down">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="items.html">Dishes</a>
+                    </li>
+                    <li>
+                        <a href="cocktails.html">Cocktails</a>
+                    </li>
+                    <li>
+                        <a href="liquor.html">Liquor</a>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                  <a href="addtocart.html">View Cart</a>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="items.html">Dishes</a>
+                    </li>
+                    <li>
+                        <a href="cocktails.html">Cocktails</a>
+                    </li>
+                    <li>
+                        <a href="liquor.html">Liquor</a>
+                    </li>
+                </ul>
+                <ul class="side-nav right hide-on-med-and-down">
+                  <a href="addtocart.html">View Cart</a>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col s12 m12" style="text-align:center;font-size:18px">
+                <span style="font-weight:bold;color: #607D8B;">Create a favorite list by simply clicking Add to favorite list!!</span>
+                <span id="count" style="font-weight:bold;">0</span>
+                <span style="font-weight:bold;">Items in the favorite list</span>
+                <a style="margin-top: 5px;font-weight: bold;" href="#modalList" class="btn waves-effect waves-light indigo darken-4">Show Favorite List
+                    <i class="material-icons right">send</i>
+                </a>
+            </div>
+        </div>
+        <div id="modalList" class="modal" style="top: 50% !important;">
+            <div class="modal-content" style="text-align: center;">
+                <h5 style="color: #0089ec;text-align: center;">My Favorite List</h4>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="left hide-on-med-and-down">
-				<li>
-						<a href="home.html">Home</a>
-				</li>
-				<li>
-						<a href="items.html">Dishes</a>
-				</li>
-				<li>
-						<a href="cocktails.html">Cocktails</a>
-				</li>
-				<li>
-						<a href="liquor.html">Liquor</a>
-				</li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-				<li>
-						<a href="home.html">Home</a>
-				</li>
-				<li>
-						<a href="items.html">Dishes</a>
-				</li>
-				<li>
-						<a href="cocktails.html">Cocktails</a>
-				</li>
-				<li>
-						<a href="liquor.html">Liquor</a>
-				</li>
-      </ul>
-    </div>
-  </nav>
-  <div class="row">
-      <div class="col s12 m12" style="text-align:center;font-size:18px">
-        <span style="font-weight:bold;color: #607D8B;">Create a favorite list by simply clicking Add to favorite list!!</span>
-        <span id="count" style="font-weight:bold;">0</span> <span style="font-weight:bold;">Items in the favorite list</span>
-        <a style="margin-top: 5px;font-weight: bold;" href="#modalList" class="btn waves-effect waves-light indigo darken-4" >Show Favorite List
-            <i class="material-icons right">send</i>
-        </a>
-      </div>
-    </div>
-    <div id="modalList" class="modal" style="top: 50% !important;">
-        <div class="modal-content" style="text-align: center;">
-            <h5 style="color: #0089ec;text-align: center;">My Favorite List</h4>
+                <form id="favoriteListForm">
+                    <div class="col s12 m12 l12" style="text-align: center;">
+                        <span style="font-weight:bold;    color: #607D8B;">Send your favorite list to a friend you know!!</span>
+                    </div>
+                    <div class="col s12 m6 offset-m3" style="text-align: center;">
+                        <div class="input-field col s8">
+                            <input id="favoriteListFormEmail" type="email" name="email" class="validate" required="required" placeholder="Please enter email here!">
 
-              <form id="favoriteListForm">
-                  <div class="col s12 m12 l12" style="text-align: center;">
-                      <span style="font-weight:bold;    color: #607D8B;">Send your favorite list to a friend you know!!</span>
-                  </div>
-                  <div class="col s12 m6 offset-m3" style="text-align: center;">
-                      <div class="input-field col s8">
-                          <input id="favoriteListFormEmail" type="email" name="email" class="validate" required="required" placeholder="Please enter email here!">
+                        </div>
+                        <button style="margin-top: 18px;    font-weight: bold;" class="btn waves-effect waves-light col s4 indigo darken-4" type="submit" name="action">Send Favorite List
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
 
-                      </div>
-                      <button style="margin-top: 18px;    font-weight: bold;" class="btn waves-effect waves-light col s4 indigo darken-4" type="submit" name="action">Send Favorite List
-                          <i class="material-icons right">send</i>
-                      </button>
-                  </div>
-              </form>
-
-
-            <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                <a href="#!" style="color: #0089ec;text-align: center;font-weight:bold" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/mongoliyen.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 font">
+                            <span class="customTitle1">Mongolian Rice</span>
+                            <i class="material-icons right">
+                                <a class="btn-floating red">
+                                    <i class="material-icons">toc</i>
+                                </a>
+                            </i>
+                        </span>
+                        <h6 class="promo customPrice1">Rs 400.00</h6>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Mongolian Rice<i class="material-icons right">close</i>
+                        </span>
+                    </br>
+                    <a class="waves-effect waves-light btn red cart1" >
+                        <i class="material-icons left">offline_pin</i>Add to Cart</a>
+                    <br/>
+                    <a class="waves-effect waves-light btn blue add1" style="margin-top: 5px;">
+                        <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/fried_rice.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 font">
+                        <span class="customTitle2">Mixed Fried Rice</span>
+                        <i class="material-icons right">
+                            <a class="btn-floating red">
+                                <i class="material-icons">toc</i>
+                            </a>
+                        </i>
+                    </span>
+                    <h6 class="promo customPrice2">Rs 300.00</h6>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Mixed Fried Rice<i class="material-icons right">close</i>
+                    </span>
+                </br>
+                <a class="waves-effect waves-light btn red cart2">
+                    <i class="material-icons left">offline_pin</i>Add to Cart</a>
+                <br/>
+                <a class="waves-effect waves-light btn blue add2" style="margin-top: 5px;">
+                    <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
+            </div>
         </div>
     </div>
-<div class="row">
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="images/mongoliyen.jpg">
+                <img class="activator" src="images/fried_chicken.jpg">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4 font"><span class="customTitle1">Mongolian Rice</span><i class="material-icons right">
+                <span class="card-title activator grey-text text-darken-4">
+                    <span class="customTitle3">Fried Chicken Portion</span>
+                    <i class="material-icons right">
                         <a class="btn-floating red">
                             <i class="material-icons">toc</i>
                         </a>
                     </i>
                 </span>
-                <h6 class="promo customPrice1">Rs 400.00</h6>
+                <h6 class="promo customPrice3">Rs 500.00</h6>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Mongolian Rice<i class="material-icons right">close</i>
+                <span class="card-title grey-text text-darken-4">Fried Chicken Portion<i class="material-icons right">close</i>
                 </span>
             </br>
-            <a class="waves-effect waves-light btn red" href="./addtocart.html">
+            <a class="waves-effect waves-light btn red cart3">
                 <i class="material-icons left">offline_pin</i>Add to Cart</a>
-          <br/>
-          <a class="waves-effect waves-light btn blue add1" style="margin-top: 5px;">
-              <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
+            <br/>
+            <a class="waves-effect waves-light btn blue add3" style="margin-top: 5px;">
+                <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
         </div>
     </div>
 </div>
 <div class="col s12 m4">
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/fried_rice.jpg">
+            <img class="activator" src="images/chicken_burger.jpg">
         </div>
         <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4 font"><span class="customTitle2">Mixed Fried Rice</span><i class="material-icons right">
+            <span class="card-title activator grey-text text-darken-4">
+                <span class="customTitle4">Chicken Burger</span>
+                <i class="material-icons right">
                     <a class="btn-floating red">
                         <i class="material-icons">toc</i>
                     </a>
                 </i>
             </span>
-            <h6 class="promo customPrice2">Rs 300.00</h6>
+            <h6 class="promo customPrice4">Rs 300.00</h6>
         </div>
         <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Mixed Fried Rice<i class="material-icons right">close</i>
+            <span class="card-title grey-text text-darken-4">Chicken Burger<i class="material-icons right">close</i>
             </span>
         </br>
         <a class="waves-effect waves-light btn red" href="./addtocart.html">
             <i class="material-icons left">offline_pin</i>Add to Cart</a>
-            <br/>
-            <a class="waves-effect waves-light btn blue add2" style="margin-top: 5px;">
-                <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
+        <br/>
+        <a class="waves-effect waves-light btn blue add4" style="margin-top: 5px;">
+            <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
     </div>
 </div>
 </div>
 <div class="col s12 m4">
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/fried_chicken.jpg">
+        <img class="activator" src="images/frenchfrice.jpg">
     </div>
     <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><span class="customTitle3">Fried Chicken Portion</span><i class="material-icons right">
+        <span class="card-title activator grey-text text-darken-4">
+            <span class="customTitle5">French Frice Portion</span>
+            <i class="material-icons right">
                 <a class="btn-floating red">
                     <i class="material-icons">toc</i>
                 </a>
             </i>
         </span>
-        <h6 class="promo customPrice3">Rs 500.00</h6>
+        <h6 class="promo customPrice5">Rs 300.00</h6>
     </div>
     <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Fried Chicken Portion<i class="material-icons right">close</i>
+        <span class="card-title grey-text text-darken-4">French Frice Portion<i class="material-icons right">close</i>
         </span>
     </br>
     <a class="waves-effect waves-light btn red" href="./addtocart.html">
         <i class="material-icons left">offline_pin</i>Add to Cart</a>
-        <br/>
-        <a class="waves-effect waves-light btn blue add3" style="margin-top: 5px;">
-            <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
-</div>
-</div>
-</div>
-<div class="col s12 m4">
-<div class="card">
-<div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="images/chicken_burger.jpg">
-</div>
-<div class="card-content">
-    <span class="card-title activator grey-text text-darken-4"><span class="customTitle4">Chicken Burger</span><i class="material-icons right">
-            <a class="btn-floating red">
-                <i class="material-icons">toc</i>
-            </a>
-        </i>
-    </span>
-    <h6 class="promo customPrice4">Rs 300.00</h6>
-</div>
-<div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">Chicken Burger<i class="material-icons right">close</i>
-    </span>
-</br>
-<a class="waves-effect waves-light btn red" href="./addtocart.html">
-    <i class="material-icons left">offline_pin</i>Add to Cart</a>
     <br/>
-    <a class="waves-effect waves-light btn blue add4" style="margin-top: 5px;">
+    <a class="waves-effect waves-light btn blue add5" style="margin-top: 5px;">
         <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
 </div>
 </div>
@@ -234,46 +277,22 @@
 <div class="col s12 m4">
 <div class="card">
 <div class="card-image waves-effect waves-block waves-light">
-<img class="activator" src="images/frenchfrice.jpg">
+    <img class="activator" src="images/potatowedges.jpg">
 </div>
 <div class="card-content">
-<span class="card-title activator grey-text text-darken-4"><span class="customTitle5">French Frice Portion</span><i class="material-icons right">
-        <a class="btn-floating red">
-            <i class="material-icons">toc</i>
-        </a>
-    </i>
-</span>
-<h6 class="promo customPrice5">Rs 300.00</h6>
+    <span class="card-title activator grey-text text-darken-4">
+        <span class="customTitle6">Potato Wedges Portion</span>
+        <i class="material-icons right">
+            <a class="btn-floating red">
+                <i class="material-icons">toc</i>
+            </a>
+        </i>
+    </span>
+    <h6 class="promo customPrice6">Rs 400.00</h6>
 </div>
 <div class="card-reveal">
-<span class="card-title grey-text text-darken-4">French Frice Portion<i class="material-icons right">close</i>
-</span>
-</br>
-<a class="waves-effect waves-light btn red" href="./addtocart.html">
-    <i class="material-icons left">offline_pin</i>Add to Cart</a>
-<br/>
-<a class="waves-effect waves-light btn blue add5" style="margin-top: 5px;">
-    <i class="material-icons left">offline_pin</i>Add to Favorite List</a>
-</div>
-</div>
-</div>
-<div class="col s12 m4">
-<div class="card">
-<div class="card-image waves-effect waves-block waves-light">
-<img class="activator" src="images/potatowedges.jpg">
-</div>
-<div class="card-content">
-<span class="card-title activator grey-text text-darken-4"><span class="customTitle6">Potato Wedges Portion</span><i class="material-icons right">
-    <a class="btn-floating red">
-        <i class="material-icons">toc</i>
-    </a>
-</i>
-</span>
-<h6 class="promo customPrice6">Rs 400.00</h6>
-</div>
-<div class="card-reveal">
-<span class="card-title grey-text text-darken-4">Potato Wedges Portion<i class="material-icons right">close</i>
-</span>
+    <span class="card-title grey-text text-darken-4">Potato Wedges Portion<i class="material-icons right">close</i>
+    </span>
 </br>
 <a class="waves-effect waves-light btn red" href="./addtocart.html">
     <i class="material-icons left">offline_pin</i>Add to Cart</a>
@@ -287,40 +306,66 @@
 
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     $('.carousel.carousel-slider').carousel({full_width: true});
     $(".button-collapse").sideNav();
     $('.modal').modal();
 
-    $(".add1").on("click", function () {
-      //alert($(".customPrice1").text());
-      $("#count").html(parseInt($("#count").text()) + 1);
+    $(".add1").on("click", function() {
+        //alert($(".customPrice1").text());
+        $("#count").html(parseInt($("#count").text()) + 1);
+        var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+        Materialize.toast($toastContent, 5000);
     });
 
-    $(".add2").on("click", function () {
-      $("#count").html(parseInt($("#count").text()) + 1);
+    $(".add2").on("click", function() {
+        $("#count").html(parseInt($("#count").text()) + 1);
+        var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+        Materialize.toast($toastContent, 5000);
     });
 
-    $(".add3").on("click", function () {
-    $("#count").html(parseInt($("#count").text()) + 1);
+    $(".add3").on("click", function() {
+        $("#count").html(parseInt($("#count").text()) + 1);
+        var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+        Materialize.toast($toastContent, 5000);
     });
 
-    $(".add4").on("click", function () {
-      alert($(".customTitle4").text());
+    $(".add4").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+      Materialize.toast($toastContent, 5000);
     });
 
-    $(".add5").on("click", function () {
-      alert($(".customTitle5").text());
+    $(".add5").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+      Materialize.toast($toastContent, 5000);
     });
 
-    $(".add6").on("click", function () {
-      alert($(".customTitle6").text());
+    $(".add6").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the favorite list</span>');
+      Materialize.toast($toastContent, 5000);
     });
 
-    (function(){
-       emailjs.init("user_5QiMd39v0ApaWjKSodfGQ");
+    $(".cart1").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the cart</span>');
+      Materialize.toast($toastContent, 5000);
+    });
+
+    $(".cart2").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the cart</span>');
+      Materialize.toast($toastContent, 5000);
+    });
+
+    $(".cart3").on("click", function() {
+      var $toastContent = $('<span style="color:#ce93d8;font-weight:bold">This item added to the cart</span>');
+      Materialize.toast($toastContent, 5000);
+    });
+
+
+
+    (function() {
+        emailjs.init("user_5QiMd39v0ApaWjKSodfGQ");
     })();
 
     $("#favoriteListForm").on("submit", function(event) {
@@ -328,14 +373,13 @@ $(document).ready(function() {
         var favoriteListFormEmail = $('#favoriteListFormEmail').val();
 
         $("#favoriteListForm").find("button").text("Sending ...");
-        emailjs.sendForm("default_service","pub_hunter_favorite","favoriteListForm")
-          .then(function(){
-             alert("Favorite list successfully sent!");
-             $("#favoriteListForm").find("button").text("Sent");
-          }, function(err) {
+        emailjs.sendForm("default_service", "pub_hunter_favorite", "favoriteListForm").then(function() {
+            alert("Favorite list successfully sent!");
+            $("#favoriteListForm").find("button").text("Sent");
+        }, function(err) {
             // alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-             $("#favoriteListForm").find("button").text("Send");
-          });
+            $("#favoriteListForm").find("button").text("Send");
+        });
     });
 
 });
